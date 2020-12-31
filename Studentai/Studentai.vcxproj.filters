@@ -27,6 +27,9 @@
     <ClCompile Include="Program.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Studentas_Class.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="03v.h">
@@ -34,6 +37,9 @@
     </ClInclude>
     <ClInclude Include="03v1.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Studentas_Class.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
