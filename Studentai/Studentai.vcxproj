@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="03v.cpp" />
     <ClCompile Include="03v1.cpp" />
+    <ClCompile Include="Program.cpp" />
     <ClCompile Include="Studentai.cpp" />
   </ItemGroup>
   <ItemGroup>
