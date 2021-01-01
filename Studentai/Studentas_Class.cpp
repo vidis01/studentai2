@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Studentas_Class::Studentas_Class(std::string name, std::string surname, int egzamResult, list<int> homeworksGrades, float finalResult)
+Studentas_Class::Studentas_Class(std::string name, std::string surname, int egzamResult, list<int>& homeworksGrades, float finalResult)
 {
 	this->name = name;
 	this->surname = surname;
@@ -27,8 +27,12 @@ void Studentas_Class::set_egzamResult(int egzamResult) {
 	this->egzamResult = egzamResult;
 }
 
-void Studentas_Class::set_homeworksGrades(std::list<int> homeworksGrades) {
-	this-> homeworksGrades = homeworksGrades;
+void Studentas_Class::set_homeworksGrades(std::list<int>& homeworksGrades) {
+	this->homeworksGrades = homeworksGrades;
+}
+
+void Studentas_Class::set_finalResult(float finalResult) {
+	this->finalResult = finalResult;
 }
 
 std::string Studentas_Class::get_name() {
@@ -43,6 +47,10 @@ int Studentas_Class::get_egzamResult() {
 	return egzamResult;
 }
 
-std::list<int> Studentas_Class::get_homeworksGrades() {
+std::list<int>& Studentas_Class::get_homeworksGrades() {
 	return homeworksGrades;
+}
+
+float Studentas_Class::get_finalResult() {
+	return finalResult;
 }

@@ -13,6 +13,10 @@ int main()
 
 	studentas.get_homeworksGrades().push_back(9);
 
+	homeGrades.clear();
+
+	studentas.set_homeworksGrades(homeGrades);
+
 	cout << studentas.get_homeworksGrades().size() << endl;
 
 	return 0;
