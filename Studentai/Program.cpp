@@ -8,16 +8,12 @@ int main()
 {
 	cout << "Hello." << endl;
 
-	std::list<int> homeGrades;
-	Studentas_Class studentas("Jonas", "Jonaitis", 6, homeGrades, 5.5);
+	std::list<int> homeGrades = { 4, 5, 8, 2, 1, 10};
 
-	studentas.get_homeworksGrades().push_back(9);
+	Studentas_Class studentas("Jonas", "Jonaitis", 6, homeGrades);
 
-	homeGrades.clear();
-
-	studentas.set_homeworksGrades(homeGrades);
-
-	cout << studentas.get_homeworksGrades().size() << endl;
+	cout << studentas.finalGrade("med") << endl;
+	cout << studentas.finalGrade("vid") << endl;
 
 	return 0;
 }
