@@ -11,9 +11,12 @@ private:
 	int egzamResult;
 	std::list<int> homeworksGrades;
 	float finalResult = 0;
+	bool isNumber(string);
 public:
-	//setters
+	//constructors
 	Studentas_Class(std::string, std::string, int, std::list<int>&);
+	Studentas_Class();
+	//setters
 	void set_name(std::string);
 	void set_surname(std::string);
 	void set_egzamResult(int);
@@ -29,4 +32,6 @@ public:
 	float findMedian();
 	float average();
 	float finalGrade(std::string);
+	void readGradesFromConsole();
+	void randomGradesGenerator();
 };

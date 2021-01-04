@@ -6,12 +6,26 @@
 
 using namespace std;
 
+bool Studentas_Class::isNumber(string s)
+{
+	try {
+		int number = stoi(s);
+	}
+	catch (exception e)
+	{
+		return false;
+	}
+	return true;
+}
+
 Studentas_Class::Studentas_Class(std::string name, std::string surname, int egzamResult, list<int>& homeworksGrades) {
 	this->name = name;
 	this->surname = surname;
 	this->egzamResult = egzamResult;
 	this->homeworksGrades = homeworksGrades;
 }
+
+Studentas_Class::Studentas_Class() { };
 
 void Studentas_Class::set_name(std::string name ) {
 	this->name = name;
@@ -115,5 +129,89 @@ float Studentas_Class::finalGrade(std::string howToCalculate) {
 	finalResult = results * 0.4 + egzamResult * 0.6;
 
 	return finalResult;
+}
+
+void Studentas_Class::readGradesFromConsole()
+{
+	string egzamResultString;
+	string invalidEgzamResultMessage = "Ivertinimas klaidingas, bus naudojamas 0";
+
+	bool gradesExist = true; // ar ivestas dar vienas pazymys 
+	string gradeString;
+	bool isNull = true;
+
+	cout << "Egzamino ivertinimas: " << endl;
+	cin >> egzamResultString;
+
+	bool number = isNumber(egzamResultString);
+
+	if (number == true)
+	{
+		int egzamResult = stoi(egzamResultString);
+
+		if (egzamResult >= 0 && egzamResult <= 10)
+		{
+			this->egzamResult = egzamResult;
+		}
+		else
+		{
+			cout << invalidEgzamResultMessage << endl;
+			this->egzamResult = 0;
+		}
+	}
+	else
+	{
+		cout << invalidEgzamResultMessage << endl;
+		this->egzamResult = 0;
+	}
+
+	cout << "Iveskite pazymius atskirtus tarpais, baigus ivestite -1 ir paspauskite enter" << endl;
+	while (gradesExist == true)
+	{
+		cin >> gradeString;
+
+		int number = isNumber(gradeString);
+
+		if ((number == true) || (gradeString == "-1"))
+		{
+			int grade = std::stoi(gradeString);
+			if (grade >= 0 && grade <= 10)
+			{
+				homeworksGrades.push_back(grade);
+				isNull = false;
+			}
+			else if (grade == -1 && isNull == true)
+			{
+				cout << "Pazymiai neivesti" << endl;
+				continue;
+			}
+			else if (grade == -1)
+			{
+				gradesExist = false; // ivestas jau ne pazymys, o ivedimo stabdymo zenklas
+			}
+			else
+			{
+				cout << "Pazymiai turi buti desimtbaleje sistemoje" << endl;
+				continue;
+			}
+		}
+		else
+		{
+			cout << "Ivestas ne skaicius" << endl;
+			continue;
+		}
+	}
+}
+
+void Studentas_Class::randomGradesGenerator()
+{
+	egzamResult = rand() % 10 + 1;
+
+	int numberOfGradesToGenerate = 10;
+	for (int i = 0; i < numberOfGradesToGenerate; i++)
+	{
+		int random = rand() % 10 + 1;
+		homeworksGrades.push_back(random);
+	}
 }
 
