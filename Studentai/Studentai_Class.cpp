@@ -8,11 +8,11 @@
 
 using namespace std;
 
-bool Studentai_Class::compareFunc(Studentas_Class& studentData0, Studentas_Class& studentData1) {
+bool compareFunc(Studentas_Class& studentData0, Studentas_Class& studentData1) {
 	return studentData0.get_finalResult() > studentData1.get_finalResult();
 }
 
-bool Studentai_Class::isLessThan5(Studentas_Class &studentData) { return studentData.get_finalResult() < 5; }
+bool isLessThan5(Studentas_Class &studentData) { return studentData.get_finalResult() < 5; }
 
 void Studentai_Class::getData() {
 
@@ -115,7 +115,7 @@ double Studentai_Class::readFromFileToStudentsList(int fileId) {
 double Studentai_Class::sortStudentsList() {
 
 	auto start = std::chrono::high_resolution_clock::now();
-	//students.sort(compareFunc);
+	students.sort(compareFunc);
 
 	auto end = std::chrono::high_resolution_clock::now();
 	std::chrono::duration<double> diff = end - start;
@@ -155,7 +155,7 @@ double Studentai_Class::divedeStudentsInSameListAndOnlyOneNewList() {
 		}
 	}
 
-	//students.remove_if(isLessThan5);
+	students.remove_if(isLessThan5);
 
 	auto end = std::chrono::high_resolution_clock::now();
 	std::chrono::duration<double> diff = end - start;
