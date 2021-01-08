@@ -16,6 +16,26 @@ public:
 	//constructors
 	Studentas_Class(std::string, std::string, int, std::list<int>&);
 	Studentas_Class();
+	// copy constructor
+	Studentas_Class(const Studentas_Class& stud)
+		: name { stud.name },
+		surname { stud.name },
+		homeworksGrades { stud.homeworksGrades },
+		egzamResult { stud.egzamResult },
+		finalResult { stud.finalResult }  { }
+	// copy assignment operator
+	Studentas_Class& operator=(const Studentas_Class& stud) {
+		if (&stud == this) return *this;
+		homeworksGrades.clear();
+		name = stud.name;
+		surname = stud.surname;
+		homeworksGrades = stud.homeworksGrades;
+		egzamResult = stud.egzamResult;
+		finalResult = stud.finalResult;
+		return *this;
+	}
+	//destructor
+	~Studentas_Class() { };
 	//setters
 	void set_name(std::string);
 	void set_surname(std::string);
