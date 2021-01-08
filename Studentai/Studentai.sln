@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Studentai", "Studentai.vcxproj", "{0CEEC50A-34AE-4631-A66E-DD5A8CDFF1D2}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "StudentaiSetup", "..\StudentaiSetup\StudentaiSetup.vdproj", "{3D57C26A-B61B-4BDD-9314-C79A57B3267A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,10 @@ Global
 		{0CEEC50A-34AE-4631-A66E-DD5A8CDFF1D2}.Release|x64.Build.0 = Release|x64
 		{0CEEC50A-34AE-4631-A66E-DD5A8CDFF1D2}.Release|x86.ActiveCfg = Release|Win32
 		{0CEEC50A-34AE-4631-A66E-DD5A8CDFF1D2}.Release|x86.Build.0 = Release|Win32
+		{3D57C26A-B61B-4BDD-9314-C79A57B3267A}.Debug|x64.ActiveCfg = Debug
+		{3D57C26A-B61B-4BDD-9314-C79A57B3267A}.Debug|x86.ActiveCfg = Debug
+		{3D57C26A-B61B-4BDD-9314-C79A57B3267A}.Release|x64.ActiveCfg = Release
+		{3D57C26A-B61B-4BDD-9314-C79A57B3267A}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
