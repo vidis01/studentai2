@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClInclude Include="Studentai_Class.h" />
     <ClInclude Include="Studentas_Class.h" />
+    <ClInclude Include="Zmogus_Class.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

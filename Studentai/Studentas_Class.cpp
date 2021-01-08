@@ -18,22 +18,15 @@ bool Studentas_Class::isNumber(string s)
 	return true;
 }
 
-Studentas_Class::Studentas_Class(std::string name, std::string surname, int egzamResult, list<int>& homeworksGrades) {
+Studentas_Class::Studentas_Class(std::string name, std::string surname, 
+	int egzamResult, list<int>& homeworksGrades) : Zmogus_Class(name, surname) {
 	this->name = name;
 	this->surname = surname;
 	this->egzamResult = egzamResult;
 	this->homeworksGrades = homeworksGrades;
 }
 
-Studentas_Class::Studentas_Class() { };
-
-void Studentas_Class::set_name(std::string name ) {
-	this->name = name;
-}
-
-void Studentas_Class::set_surname(std::string surname) {
-	this->surname = surname;
-}
+//Studentas_Class::Studentas_Class() { };
 
 void Studentas_Class::set_egzamResult(int egzamResult) {
 	this->egzamResult = egzamResult;
@@ -45,14 +38,6 @@ void Studentas_Class::set_homeworksGrades(std::list<int>& homeworksGrades) {
 
 void Studentas_Class::set_finalResult(float finalResult) {
 	this->finalResult = finalResult;
-}
-
-std::string Studentas_Class::get_name() {
-	return name;
-}
-
-std::string Studentas_Class::get_surname() {
-	return surname;
 }
 
 int Studentas_Class::get_egzamResult() {
