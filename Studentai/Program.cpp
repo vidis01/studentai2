@@ -6,9 +6,14 @@ using namespace std;
 
 int main()
 {
-	Studentai_Class studentai;
+	list<int> grades = {5, 6, 7, 8};
+	Studentas_Class studentas("Vardenis", "Pavardenis", 8, grades);
 
-	studentai.analyzeSpeedWithLists(1, 100000);
+	Studentas_Class studentasKopija = studentas;
+
+	studentas.set_name("Ignas");
+
+	cout << studentasKopija.get_name() << endl;
 
 	return 0;
 }
