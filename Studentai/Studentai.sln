@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Studentai", "Studentai.vcxp
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "StudentaiSetup", "..\StudentaiSetup\StudentaiSetup.vdproj", "{3D57C26A-B61B-4BDD-9314-C79A57B3267A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StudentaiTests", "..\StudentaiTests\StudentaiTests.vcxproj", "{8801572A-3138-4A10-AD62-9622015E67D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -27,6 +29,14 @@ Global
 		{3D57C26A-B61B-4BDD-9314-C79A57B3267A}.Debug|x86.ActiveCfg = Debug
 		{3D57C26A-B61B-4BDD-9314-C79A57B3267A}.Release|x64.ActiveCfg = Release
 		{3D57C26A-B61B-4BDD-9314-C79A57B3267A}.Release|x86.ActiveCfg = Release
+		{8801572A-3138-4A10-AD62-9622015E67D4}.Debug|x64.ActiveCfg = Debug|x64
+		{8801572A-3138-4A10-AD62-9622015E67D4}.Debug|x64.Build.0 = Debug|x64
+		{8801572A-3138-4A10-AD62-9622015E67D4}.Debug|x86.ActiveCfg = Debug|Win32
+		{8801572A-3138-4A10-AD62-9622015E67D4}.Debug|x86.Build.0 = Debug|Win32
+		{8801572A-3138-4A10-AD62-9622015E67D4}.Release|x64.ActiveCfg = Release|x64
+		{8801572A-3138-4A10-AD62-9622015E67D4}.Release|x64.Build.0 = Release|x64
+		{8801572A-3138-4A10-AD62-9622015E67D4}.Release|x86.ActiveCfg = Release|Win32
+		{8801572A-3138-4A10-AD62-9622015E67D4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

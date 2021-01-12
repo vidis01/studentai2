@@ -6,10 +6,11 @@ using namespace std;
 
 int main()
 {
-	list<int> grades = {5, 6, 7, 8};
-	Studentas_Class studentas("Vardenis", "Pavardenis", 8, grades);
-
-	cout << studentas.getFullName() << endl;
+	Studentas_Class stud;
+	float average = 9;
+	std::list<int> grades = { 10, 9, 8, 7 };
+	stud.set_homeworksGrades(grades);
 
 	return 0;
 }
+
