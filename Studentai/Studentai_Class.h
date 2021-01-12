@@ -9,6 +9,7 @@ class Studentai_Class {
 private:
 	std::list<Studentas_Class> students;
 public:
+	std::list<Studentas_Class>& get_studentai();
 	void getData();
 	void generateStudentsData(int);
 	double generateStudentsFileFromStudentsList(int, int);

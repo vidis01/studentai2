@@ -14,6 +14,10 @@ bool compareFunc(Studentas_Class& studentData0, Studentas_Class& studentData1) {
 
 bool isLessThan5(Studentas_Class &studentData) { return studentData.get_finalResult() < 5; }
 
+std::list<Studentas_Class>& Studentai_Class::get_studentai() {
+	return students;
+}
+
 void Studentai_Class::getData() {
 
 	int numberOfStudents;
